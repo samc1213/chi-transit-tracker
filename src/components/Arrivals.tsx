@@ -4,7 +4,7 @@ import TrainApi from '../api/TrainApi';
 import PredictionResponse from '../api/PredictionResponse';
 import BusArrivalRow from './BusArrivalRow';
 
-export default class Arrivals extends Component<{}, {isFetching: boolean, predictionResponses: PredictionResponse[]}> {
+export default class Arrivals extends Component<{dataIndex: number}, {isFetching: boolean, predictionResponses: PredictionResponse[]}> {
     timer: number;
     constructor(props: any) {
         super(props);
@@ -16,14 +16,17 @@ export default class Arrivals extends Component<{}, {isFetching: boolean, predic
     }
 
     render() {
-        const responseData = new Array<any>();
+        const allResponseData = new Array<Array<any>>();
+        let responseData = new Array<any>();
         for (var [idx, response] of this.state.predictionResponses.entries()) {
-            if (idx == 4) {
-                break;
+            if (idx % 4 === 0 && idx !== 0) {
+                allResponseData.push(responseData);
+                responseData = new Array<any>();
             }
             responseData.push(<BusArrivalRow key={idx} predictionResponse={response}></BusArrivalRow>)
         };
-        return (<ul className="arrivals-container">{this.state.isFetching ? 'Refreshing...' : responseData}</ul>);
+        const allRespIdx = this.props.dataIndex % allResponseData.length;
+        return (<ul className="arrivals-container">{allResponseData[allRespIdx]}</ul>);
     }
 
     componentDidMount() {
@@ -38,7 +41,6 @@ export default class Arrivals extends Component<{}, {isFetching: boolean, predic
             TrainApi.getPredictions([30233, 30236, 30235, 30234])
         ]).then(resp => {
             let allData = resp[0].concat(resp[1]);
-            // In theory we could handle ties, but it doens't really matter for visualization
             allData.sort((a, b) => {
                 if (a.Prediction == null || b.Prediction == null || a.Prediction < b.Prediction) {
                     return -1;
