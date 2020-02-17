@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
 }
@@ -39,4 +43,47 @@
 
 .busArrivalRow {
   vertical-align: 25px;
+}
+
+.arrivals-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+
+  display: flex;
+  
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.arrival {
+  background: blue;
+  color: white;
+  font-weight: bold;
+  display:flex;
+  flex-direction: row;
+  padding-left: 5vh;
+  padding-right: 5vh;
+  font-family: Helvetica;
+  color: white;
+  font-weight: bold;
+  font-size: 16vh;
+  height: 25vh;
+  line-height: 25vh;
+  border: 1px solid black;
+}
+
+.arrival-detail {
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arrival-destination {
+  text-align: left;
+}
+
+.arrival-mins {
+  text-align: right;
 }

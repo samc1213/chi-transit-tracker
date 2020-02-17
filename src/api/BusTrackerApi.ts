@@ -1,4 +1,4 @@
-import PredictionResponse from './PredictionResponse';
+import PredictionResponse, { PredictionLine } from './PredictionResponse';
 
 export default class BusTrackerApi {
     public static getPredictions(busStopIds: Array<number>) : Promise<Array<PredictionResponse>> {
@@ -8,11 +8,10 @@ export default class BusTrackerApi {
             fetch(url)
             .then(response => response.json())
             .then(body => {
-                console.log(body);
                 let response: Array<PredictionResponse> = new Array<PredictionResponse>();
                 body['bustime-response']['prd'].forEach((prediction: { [x: string]: string; }) => {
                     response.push(new PredictionResponse(prediction['stpnm'], prediction['des'],
-                        prediction['prdctdn'] !== 'DUE' ? parseInt(prediction['prdctdn']) : null))
+                        PredictionLine.Bus, prediction['prdctdn'] !== 'DUE' ? parseInt(prediction['prdctdn']) : null))
                 });
                 resolve(response);
             })
