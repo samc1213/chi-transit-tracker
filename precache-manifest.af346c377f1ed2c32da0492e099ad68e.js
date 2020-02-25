@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "05a67f5346346c250d70bbaf96302c2f",
+    "revision": "16d55ade50bd6e735d1a9735390ddd3f",
     "url": "/chi-transit-tracker/index.html"
   },
   {
-    "revision": "e14dd5e294c6322da6f8",
+    "revision": "e95b4250750185065267",
     "url": "/chi-transit-tracker/static/css/main.5a11830b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/chi-transit-tracker/static/js/2.bb0c16f8.chunk.js"
   },
   {
-    "revision": "e14dd5e294c6322da6f8",
-    "url": "/chi-transit-tracker/static/js/main.9536d483.chunk.js"
+    "revision": "e95b4250750185065267",
+    "url": "/chi-transit-tracker/static/js/main.d490a196.chunk.js"
   },
   {
     "revision": "fe2a97ce5a20d8c3e59f",
