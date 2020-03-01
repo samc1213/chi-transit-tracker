@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/chi-transit-tracker/static/css/main.086a4db4.chunk.css",
-    "main.js": "/chi-transit-tracker/static/js/main.8101a142.chunk.js",
-    "main.js.map": "/chi-transit-tracker/static/js/main.8101a142.chunk.js.map",
+    "main.js": "/chi-transit-tracker/static/js/main.35db2f60.chunk.js",
+    "main.js.map": "/chi-transit-tracker/static/js/main.35db2f60.chunk.js.map",
     "runtime~main.js": "/chi-transit-tracker/static/js/runtime~main.c441f3fa.js",
     "runtime~main.js.map": "/chi-transit-tracker/static/js/runtime~main.c441f3fa.js.map",
     "static/js/2.bb0c16f8.chunk.js": "/chi-transit-tracker/static/js/2.bb0c16f8.chunk.js",
     "static/js/2.bb0c16f8.chunk.js.map": "/chi-transit-tracker/static/js/2.bb0c16f8.chunk.js.map",
     "index.html": "/chi-transit-tracker/index.html",
-    "precache-manifest.54ceb2812d26449ef3cb4e75e3bb2a35.js": "/chi-transit-tracker/precache-manifest.54ceb2812d26449ef3cb4e75e3bb2a35.js",
+    "precache-manifest.ccd35a5cc6e857e5543aad362d794298.js": "/chi-transit-tracker/precache-manifest.ccd35a5cc6e857e5543aad362d794298.js",
     "service-worker.js": "/chi-transit-tracker/service-worker.js",
     "static/css/main.086a4db4.chunk.css.map": "/chi-transit-tracker/static/css/main.086a4db4.chunk.css.map"
   }
