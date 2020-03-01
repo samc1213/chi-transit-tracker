@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/chi-transit-tracker/precache-manifest.ba11f34b39fe88d3cf7669a7d92ace5e.js"
+  "/chi-transit-tracker/precache-manifest.8b9a37ba7abdd6da36fe49f2f4cf0284.js"
 );
 
 self.addEventListener('message', (event) => {
